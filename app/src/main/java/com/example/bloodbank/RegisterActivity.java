@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RegisterActivity extends AppCompatActivity {
 
 
-    EditText registration_name,registration_email,registration_phone,registration_password,registration_address;
+    EditText registration_name,registration_email,registration_phone,registration_password,registration_address,registration_blood_group;
 
     Button register_btn;
 
@@ -41,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         registration_phone = findViewById(R.id.registration_phone);
         registration_password = findViewById(R.id.registration_password);
         registration_address = findViewById(R.id.registration_address);
+        registration_blood_group = findViewById(R.id.registration_blood_group);
 
         register_btn = findViewById(R.id.register_btn);
 
@@ -55,8 +56,9 @@ public class RegisterActivity extends AppCompatActivity {
                 String name=registration_name.getText().toString();
                 String email=registration_email.getText().toString();
                 String phone=registration_phone.getText().toString();
-                String address=registration_password.getText().toString();
-                String pass= registration_address.getText().toString();
+                String pass=registration_password.getText().toString();
+                String address= registration_address.getText().toString();
+                String bGroup= registration_blood_group.getText().toString();
 
 
                 FirebaseAuth mAuth= FirebaseAuth.getInstance();
@@ -79,6 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
                             hashMap.put("name",name);
                             hashMap.put("phone",phone);
                             hashMap.put("address",address);
+                            hashMap.put("bGroup",bGroup);
 
                             FirebaseDatabase database=FirebaseDatabase.getInstance();
                             DatabaseReference reference=database.getReference("Users");

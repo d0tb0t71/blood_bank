@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_add_request.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_request.xml" value="0.25" />
+        <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/activity_request_details.xml" value="0.25" />
+        <entry key="..\:/Users/Dipon SutraDhar/AndroidStudioProjects/BloodBank/app/src/main/res/layout/row_request.xml" value="0.25" />
       </map>
     </option>
   </component>
