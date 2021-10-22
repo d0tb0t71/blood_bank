@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ImageView my_profile_IV,request_IV;
+    ImageView my_profile_IV, request_IV, blood_bank_IV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,30 +16,41 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-
         my_profile_IV = findViewById(R.id.my_profile_IV);
         request_IV = findViewById(R.id.request_IV);
+        blood_bank_IV = findViewById(R.id.blood_bank_IV);
 
 
-        my_profile_IV.setOnClickListener(v->{
+        my_profile_IV.setOnClickListener(v -> {
 
             startProfileActivity();
 
         });
 
-        request_IV.setOnClickListener(v->{
+        request_IV.setOnClickListener(v -> {
 
             startRequestActivity();
+
+        });
+
+        blood_bank_IV.setOnClickListener(v -> {
+
+            startBloodBank();
+
         });
 
 
     }
 
+    private void startBloodBank() {
+        startActivity(new Intent(getApplicationContext(), BloodBank.class));
+    }
+
     private void startRequestActivity() {
-        startActivity(new Intent(getApplicationContext(),RequestActivity.class));
+        startActivity(new Intent(getApplicationContext(), RequestActivity.class));
     }
 
     private void startProfileActivity() {
-        startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
     }
 }

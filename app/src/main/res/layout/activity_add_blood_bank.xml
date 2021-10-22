@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30sp"
+    android:background="@drawable/sl_back"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please provide real information..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        />
+    <EditText
+        android:id="@+id/bb_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Blood Bank Name"
+        />
+
+    <EditText
+        android:id="@+id/bb_description"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="Short description about this BloodBank"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/bb_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/bb_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+    <Button
+        android:id="@+id/add_bb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Blood Bank"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+
+</LinearLayout>
