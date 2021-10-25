@@ -46,6 +46,16 @@ public class AdapterBloodBank extends RecyclerView.Adapter<AdapterBloodBank.MyVi
             startBBDetails(modelBloodBank.getBb_name(),modelBloodBank.getBb_addedBy(),modelBloodBank.getBb_description(),modelBloodBank.getBb_mobile(),modelBloodBank.getBb_location());
 
         });
+        holder.bb_mobile.setOnClickListener(v->{
+
+            startBBDetails(modelBloodBank.getBb_name(),modelBloodBank.getBb_addedBy(),modelBloodBank.getBb_description(),modelBloodBank.getBb_mobile(),modelBloodBank.getBb_location());
+
+        });
+        holder.bb_location.setOnClickListener(v->{
+
+            startBBDetails(modelBloodBank.getBb_name(),modelBloodBank.getBb_addedBy(),modelBloodBank.getBb_description(),modelBloodBank.getBb_mobile(),modelBloodBank.getBb_location());
+
+        });
 
     }
 

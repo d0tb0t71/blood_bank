@@ -45,6 +45,19 @@ public class AdapterRequest extends RecyclerView.Adapter<AdapterRequest.MyViewHo
             startDetailsPage(modelRequest.getName(), modelRequest.getbGroup(),modelRequest.getMobile(),modelRequest.getDescription(),modelRequest.getLocation());
 
         });
+        holder.needed_blood_req.setOnClickListener(v->{
+
+            startDetailsPage(modelRequest.getName(), modelRequest.getbGroup(),modelRequest.getMobile(),modelRequest.getDescription(),modelRequest.getLocation());
+
+        });
+
+        holder.location_req.setOnClickListener(v->{
+
+            startDetailsPage(modelRequest.getName(), modelRequest.getbGroup(),modelRequest.getMobile(),modelRequest.getDescription(),modelRequest.getLocation());
+
+        });
+
+
 
 
     }

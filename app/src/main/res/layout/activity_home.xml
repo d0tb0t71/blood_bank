@@ -60,6 +60,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/find_donor_IV"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_gravity="center"

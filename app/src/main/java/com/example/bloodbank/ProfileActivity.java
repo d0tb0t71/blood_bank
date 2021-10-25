@@ -3,7 +3,9 @@ package com.example.bloodbank;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,7 +18,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    TextView profile_name,profile_mobile,profile_email,profile_address,profile_blood;
+    TextView profile_name, profile_mobile, profile_email, profile_address, profile_blood;
+    Button log_out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,32 +32,32 @@ public class ProfileActivity extends AppCompatActivity {
         profile_address = findViewById(R.id.profile_address);
         profile_blood = findViewById(R.id.profile_blood);
 
+        log_out = findViewById(R.id.log_out_btn);
 
 
-        DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference("Users");
-        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                    if(user.getUid().equals(dataSnapshot.child("uid").getValue())){
+                    if (user.getUid().equals(dataSnapshot.child("uid").getValue())) {
 
-                        String Name = ""+dataSnapshot.child("name").getValue();
-                        String Mobile = ""+dataSnapshot.child("phone").getValue();
-                        String Address = ""+dataSnapshot.child("address").getValue();
-                        String Email = ""+dataSnapshot.child("email").getValue();
-                        String bGroup = ""+dataSnapshot.child("bGroup").getValue();
+                        String Name = "" + dataSnapshot.child("name").getValue();
+                        String Mobile = "" + dataSnapshot.child("phone").getValue();
+                        String Address = "" + dataSnapshot.child("address").getValue();
+                        String Email = "" + dataSnapshot.child("email").getValue();
+                        String bGroup = "" + dataSnapshot.child("bGroup").getValue();
 
 
                         profile_name.setText(Name);
-                        profile_mobile.setText("Mobile: "+Mobile);
-                        profile_address.setText("Address: "+Address);
-                        profile_email.setText("Email: "+Email);
-                        profile_blood.setText("Blood Group: "+bGroup);
-
+                        profile_mobile.setText("Mobile: " + Mobile);
+                        profile_address.setText("Address: " + Address);
+                        profile_email.setText("Email: " + Email);
+                        profile_blood.setText("Blood Group: " + bGroup);
 
 
                     }
@@ -69,9 +72,13 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
 
+        log_out.setOnClickListener(v -> {
 
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            finish();
 
-
+        });
 
 
     }
